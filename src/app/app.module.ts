@@ -1,20 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
+import 'meteor-client';
+
+import { IonicApp, IonicModule, Platform } from 'ionic-angular';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
+    IonicModule.forRoot(AppComponent)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ IonicApp ]
 })
-export class AppModule { }
+export class AppModule {}
